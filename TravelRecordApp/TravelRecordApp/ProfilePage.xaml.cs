@@ -16,5 +16,14 @@ namespace TravelRecordApp
         {
             InitializeComponent();
         }
+        public override string ToString()
+        {
+            return this.Title;
+        }
+
+        private void Change_password_clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

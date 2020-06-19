@@ -6,10 +6,26 @@
              mc:Ignorable="d"
              x:Class="TravelRecordApp.ProfilePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Profile"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout  BackgroundColor="White" >
+                <BoxView HorizontalOptions="FillAndExpand" HeightRequest="30" VerticalOptions="Start" Color="White" />
+                <ImageButton  Source="ic_boy.png" CornerRadius="30" HeightRequest="60" WidthRequest="60"  HorizontalOptions="Center" VerticalOptions="Start" />
+                <StackLayout HeightRequest="100" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20" BackgroundColor="White">
+                    <Label Text="Test" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+                    <Entry Text="Add Bio" TextColor="Black" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+                <StackLayout VerticalOptions="Center">
+                    <Label FontSize="14" Text="+91" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="200" />
+                    <Entry x:Name="MobileNumber" Placeholder="Mobile Number" 
+                         Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                    <Button  x:Name="Change_password" Text="Click to Change Password"
+                 Clicked="Change_password_clicked"
+                 />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
