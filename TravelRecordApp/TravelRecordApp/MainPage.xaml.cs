@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+using System.Windows.Input;
 namespace TravelRecordApp
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -21,7 +21,7 @@ namespace TravelRecordApp
             iconImage.Source = ImageSource.FromResource("TravelRecordApp.Assets.Images.plane.png", assembly);
         }
 
-        private void LoginButton_Clicked(object sender, EventArgs e)
+        private void  LoginButton_Clicked(object sender, EventArgs e)
         {
            bool isEmailEmpty= string.IsNullOrEmpty(emailEntry.Text);
             bool isPasswordEmpty = string.IsNullOrEmpty(passwordEntry.Text);
@@ -34,6 +34,18 @@ namespace TravelRecordApp
             {
                 Navigation.PushAsync(new HomePage());
             }
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SignUpPage());
+        }
+        public ICommand TapCommand => new Command<string>(OpenBrowser);
+
+        [Obsolete]
+        private void OpenBrowser(string url)
+        {
+            Device.OpenUri(new Uri(url));
         }
     }
 }

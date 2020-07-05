@@ -55,7 +55,7 @@ namespace TravelRecordApp
                     int rows = conn.Insert(post);
 
                     if (rows > 0)
-                        DisplayAlert("Success", "Experience succesfully inserter", "Ok");
+                        DisplayAlert("Success", "Experience succesfully inserted", "Ok");
                     else
                         DisplayAlert("Failure", "Experience failed to be inserted", "Ok");
                 }

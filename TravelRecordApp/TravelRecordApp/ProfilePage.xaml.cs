@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace TravelRecordApp
 {
@@ -15,15 +17,14 @@ namespace TravelRecordApp
         public ProfilePage()
         {
             InitializeComponent();
+            var assembly = typeof(ProfilePage);
+            ic_boy.Source = ImageSource.FromResource("TravelRecordApp.Assets.Images.ic_boy.png", assembly);
         }
         public override string ToString()
         {
             return this.Title;
         }
 
-        private void Change_password_clicked(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

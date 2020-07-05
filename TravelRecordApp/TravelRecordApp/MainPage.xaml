@@ -25,6 +25,26 @@
         <Button  x:Name="LoginButton" Text="Log In"
                  Clicked="LoginButton_Clicked"
                  Margin="0,30,0,0"/>
+        <StackLayout  Padding="30" VerticalOptions="Center">
+            <Button Text="Not a member.? Click here" BackgroundColor="DodgerBlue" Clicked="Button_Clicked">
+            </Button>
+            <Label HorizontalOptions="Center"
+       VerticalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Forgot Password?"
+                  TextColor="Blue"
+                  TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ClickCommand}"
+                                          CommandParameter="https://xamarin.com" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        
     </StackLayout>
 
 </ContentPage>
